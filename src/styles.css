@@ -1,0 +1,64 @@
+/* SIGNAL v1.3 — Luxury Calm. Apple-style: material, spring feel, restraint. Palet Deep Teal + Warm Ivory sesuai dokumen 10. */
+:root{--teal-950:#0B2625;--teal:#123C3A;--teal2:#1B5551;--soft:#DDEBE7;--ivory:#F7F3EA;--card:#fff;--ink:#172B2A;--mut:#586765;--line:rgba(18,60,58,.12);--gold:#C8A96B;--bad:#B42318;--ok:#237A57;
+--ease:cubic-bezier(.22,1,.36,1);--t-quick:150ms;--t-fast:250ms;--glass:rgba(247,243,234,.72);--ctl:#fff;
+--sh1:0 1px 2px rgba(11,38,37,.06),0 4px 12px rgba(11,38,37,.05);--sh2:0 2px 4px rgba(11,38,37,.05),0 18px 44px rgba(11,38,37,.10)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:100%/1.5 ui-sans-serif,system-ui,-apple-system,"SF Pro Text","Segoe UI",sans-serif;font-optical-sizing:auto;-webkit-font-smoothing:antialiased;
+ background:radial-gradient(1100px 520px at 88% -8%,rgba(200,169,107,.16),transparent 62%),var(--ivory)}
+.app{display:grid;grid-template-columns:248px 1fr;min-height:100dvh}
+aside{position:sticky;top:0;height:100dvh;padding:28px 16px;display:flex;flex-direction:column;gap:4px;color:#fff;background:linear-gradient(180deg,#0F3432,var(--teal-950));box-shadow:inset -1px 0 0 rgba(255,255,255,.06)}
+aside h1{margin:0 8px;font:500 1.3rem/1 ui-serif,"New York",Georgia,serif;letter-spacing:.3em;color:var(--gold)}
+aside p{margin:6px 8px 22px;font-size:.78rem;letter-spacing:.04em;color:rgba(255,255,255,.62)}
+aside button{min-height:42px;padding:0 14px;text-align:left;font-weight:500;color:rgba(255,255,255,.78);background:transparent;border:0;box-shadow:none;border-radius:12px}
+aside button:hover{background:rgba(255,255,255,.07);transform:none;box-shadow:none}
+aside button.on{color:#fff;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(200,169,107,.5)}
+aside small{margin:auto 8px 0;font-size:.7rem;line-height:1.55;letter-spacing:.02em;color:rgba(255,255,255,.55)}
+main{padding:28px clamp(16px,3vw,40px);min-width:0}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:18px}
+.eyebrow{margin:0;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.top h2{margin:2px 0 0;font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:650;line-height:1.05;letter-spacing:-.025em}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:99px;font-size:.78rem;font-weight:600;white-space:nowrap;border:1px solid var(--line)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.live{background:var(--soft);color:#14503B}.pill.draft{background:#F3E9CF;color:#6B5314;border-color:rgba(200,169,107,.6)}
+button{font:inherit;font-weight:550;min-height:40px;padding:0 16px;border-radius:12px;border:1px solid var(--line);background:var(--ctl);color:var(--ink);box-shadow:var(--sh1);cursor:pointer;
+ transition:transform var(--t-quick) var(--ease),box-shadow var(--t-fast) var(--ease),background var(--t-fast) var(--ease)}
+button:hover:not(:disabled){transform:translateY(-1px);box-shadow:var(--sh2)}
+button:active:not(:disabled){transform:scale(.97);transition-duration:100ms}
+button:disabled{opacity:.42;cursor:not-allowed;box-shadow:none}
+button.pri{color:#fff;border-color:rgba(255,255,255,.14);background:linear-gradient(180deg,var(--teal2),var(--teal));box-shadow:inset 0 1px 0 rgba(255,255,255,.2),var(--sh1)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.dock{position:sticky;top:12px;z-index:5;padding:8px;border-radius:18px;background:var(--glass);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.55);box-shadow:var(--sh1)}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:2px;padding:4px;margin-bottom:16px;border-radius:14px;background:rgba(18,60,58,.07)}
+.tabs button{min-height:36px;border:0;box-shadow:none;background:transparent;color:var(--mut)}
+.tabs button.on{background:var(--ctl);color:var(--teal);box-shadow:var(--sh1)}
+.note{margin-bottom:14px;padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);box-shadow:var(--sh1);animation:mat 350ms var(--ease)}
+.note.bad{border-left-color:var(--bad)}.note.ok{border-left-color:var(--ok)}.note ul{margin:6px 0 0;padding-left:18px}
+@keyframes mat{from{opacity:0;transform:translateY(6px) scale(.98);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+.empty{text-align:center;padding:44px 24px;margin-bottom:16px;border-radius:20px;border:1px dashed rgba(18,60,58,.28);background:rgba(255,255,255,.5)}
+.empty h3{margin:0 0 6px;font:500 1.4rem ui-serif,"New York",Georgia,serif;letter-spacing:-.01em}.empty p{margin:0 0 16px;color:var(--mut)}
+.wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh2)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:680px;font-variant-numeric:tabular-nums}
+th,td{padding:8px;text-align:center;font-size:.85rem;height:64px;border-bottom:1px solid var(--line)}td+td,th+th,th+td{border-left:1px solid var(--line)}tr:last-child>*{border-bottom:0}
+thead th{height:48px;font-size:.7rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);background:rgba(18,60,58,.04)}
+tbody th{font-weight:600;color:var(--mut)}
+tr.brk td{font-style:italic;color:var(--mut);height:40px;background:repeating-linear-gradient(135deg,rgba(18,60,58,.04) 0 8px,transparent 8px 16px)}
+td{transition:background var(--t-fast) var(--ease),box-shadow var(--t-fast) var(--ease)}
+td.over{background:rgba(200,169,107,.2);box-shadow:inset 0 0 0 2px var(--gold)}td.sel{box-shadow:inset 0 0 0 2px var(--gold)}
+.chip{display:block;padding:8px 10px;border-radius:12px;text-align:left;cursor:grab;background:hsl(var(--h) 38% 93%);border:1px solid hsl(var(--h) 30% 82%);color:hsl(var(--h) 45% 18%);
+ transition:transform var(--t-fast) var(--ease),box-shadow var(--t-fast) var(--ease)}
+.chip:hover{transform:translateY(-1px);box-shadow:var(--sh1)}.chip:active{cursor:grabbing;transform:scale(.97);transition-duration:100ms}
+.chip b{font-weight:620;letter-spacing:-.005em}.chip small{color:hsl(var(--h) 25% 32%)}
+td small{color:var(--mut)}
+textarea,input,select{font:inherit;color:var(--ink);background:var(--ctl);border:1px solid var(--line);border-radius:10px}
+textarea{width:100%;height:60vh;padding:14px;font:.78rem/1.55 ui-monospace,monospace;border-radius:16px;box-shadow:var(--sh1)}
+.pad{padding:20px}.pad h3{margin:18px 0 8px;font:500 1.15rem ui-serif,"New York",Georgia,serif}.pad h3:first-child{margin-top:0}.pad input,.pad select{padding:6px 10px;max-width:150px}.pad input[type=checkbox]{max-width:none}.err{color:var(--bad)}
+@media(max-width:720px){.app{grid-template-columns:1fr}aside{position:static;height:auto;flex-direction:row;flex-wrap:wrap;padding:16px}aside p,aside small{display:none}.top{flex-direction:column;align-items:flex-start}button{min-height:44px}}
+@media(prefers-color-scheme:dark){:root{--ivory:#0B1716;--card:#112321;--ctl:#173230;--ink:#EAF0EE;--mut:#9DB0AC;--line:rgba(255,255,255,.1);--glass:rgba(17,35,33,.7);--teal:#7FC4B8}
+ body{background:radial-gradient(1100px 520px at 88% -8%,rgba(200,169,107,.1),transparent 62%),var(--ivory)}
+ button.pri{background:linear-gradient(180deg,#1B5551,#123C3A);color:#fff}.pill.live{background:rgba(127,196,184,.16);color:#9FE0CF}
+ .chip{background:hsl(var(--h) 25% 20%);border-color:hsl(var(--h) 22% 32%);color:hsl(var(--h) 30% 92%)}.chip small{color:hsl(var(--h) 20% 76%)}.empty{background:rgba(255,255,255,.03)}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:1ms!important;animation:none!important}button:hover:not(:disabled),.chip:hover{transform:none}}
+@media(prefers-reduced-transparency:reduce){.dock{background:var(--ivory);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-contrast:more){:root{--line:rgba(0,0,0,.45)}.chip{border-color:currentColor}}
+@media print{aside,.dock,.note,.tabs,.pill,.empty{display:none}.app{display:block}main{padding:0}@page{size:A4 landscape;margin:12mm}.wrap{box-shadow:none;overflow:visible}body{background:#fff}}
